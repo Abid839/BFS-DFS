@@ -8,16 +8,16 @@ BFS explores the search space level by level. It explores all states at the curr
 2. Enqueue the initial state along with an empty path into the queue.
 3. Initialize an empty set called visited to keep track of visited states.
 4. While the queue is not empty:
-		● Dequeue a state and its path from the front of the queue.
-		● If the dequeued state is the goal state, return the path.
-		● Otherwise:
-			○ Add the dequeued state to the visited set.
-			○ Find the coordinates of the blank tile ('B') in the dequeued state.
-			○ For each possible move (up, down, left, right) from the current blank tile position:
-					■ Calculate the new position after the move.
-					■ If the new position is valid and has not been visited:
-		● Create a new state by applying the move to the dequeued state.
-		● Enqueue the new state along with the updated path into the queue.
+	Dequeue a state and its path from the front of the queue.
+   	If the dequeued state is the goal state, return the path.
+   	Otherwise:
+		Add the dequeued state to the visited set.
+		Find the coordinates of the blank tile ('B') in the dequeued state.
+   		For each possible move (up, down, left, right) from the current blank tile position:
+			Calculate the new position after the move.
+			If the new position is valid and has not been visited:
+   	Create a new state by applying the move to the dequeued state.
+   	Enqueue the new state along with the updated path into the queue.
 5. If the queue becomes empty and no solution is found, return None or indicate that no
 solution exists.
 
